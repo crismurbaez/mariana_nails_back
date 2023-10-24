@@ -38,7 +38,7 @@ def index():
                 "result": "Update a service from codigo",
             },
             {
-                "route": "/servicio/<codigo>",
+                "route": "/servicio",
                 "method": "POST",
                 "result": "Add a service from the body via a json",
                 "format_body": {
