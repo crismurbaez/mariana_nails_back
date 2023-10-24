@@ -213,7 +213,7 @@ def create_user():
 def not_found(error=404):
     response = jsonify(
         {
-            "message": "Resource not found " + request.url + " " + str(error),
+            "message": "Resource not found " + str(error),
             "status": 404,
         }
     )
@@ -225,12 +225,7 @@ def not_found(error=404):
 def error_create(message, error=400):
     response = jsonify(
         {
-            "message": "Error creating resource in "
-            + request.url
-            + "  "
-            + str(message)
-            + " "
-            + str(error),
+            "message": "Error creating resource in " + str(message) + " " + str(error),
             "status": 400,
         }
     )
@@ -242,7 +237,7 @@ def error_create(message, error=400):
 def error_create(error=500):
     response = jsonify(
         {
-            "message": "Internal server error " + request.url + " " + str(error),
+            "message": "Internal server error " + str(error),
             "status": 500,
         }
     )
